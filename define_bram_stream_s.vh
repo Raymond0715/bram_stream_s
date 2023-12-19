@@ -1,0 +1,1 @@
+`define WE_192			192'hffffffffffffffffffffffffffffffffffffffffffffffff
