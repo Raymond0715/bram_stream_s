@@ -30,25 +30,25 @@ module bram_stream_s (
 	,input										s_instruct_a_tvalid
 	,output										s_instruct_a_tready
 
-	,input	[1535:0]							s_in_a_tdata
+	,input	[127:0]								s_in_a_tdata
 	,input										s_in_a_tvalid
 	,output										s_in_a_tready
 	,input	[15:0]								s_in_a_tkeep
-	,input	[23:0]								s_in_a_tlast
+	,input										s_in_a_tlast
 
-	,output	[1535:0]							m_out_a_tdata
+	,output	[127:0]								m_out_a_tdata
 	,output										m_out_a_tvalid
 	,input										m_out_a_tready
 	,output	reg	[15:0]							m_out_a_tkeep = 16'hffff
-	,output	[23:0]								m_out_a_tlast
+	,output										m_out_a_tlast
 );
 
 
-	wire	[1535:0]				dina_l, dina_h;
-	wire	[1535:0]				douta_l, douta_h;
+	wire	[127:0]					dina_l, dina_h;
+	wire	[127:0]					douta_l, douta_h;
 
-	wire	[191:0]					wea_l, wea_h;
-	wire	[9:0]					addra_l, addra_h;
+	wire							wea_l, wea_h;
+	wire	[13:0]					addra_l, addra_h;
 
 
 	stream_interface_wrap # (
