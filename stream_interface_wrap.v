@@ -127,14 +127,14 @@ module stream_interface_wrap # (
 		end
 	end
 
-	assign m_out_tready = (out_tready | ~m_out_tvalid) & rst_n;
+	assign out_tready = (m_out_tready | ~m_out_tvalid) & rst_n;
 
 
 	stream_interface # (
 		 .RMODE				( RMODE )
 		,.WMODE				( WMODE )
 	)
-	stream_interface_inst (
+	stream_interface_s_inst (
 		 .clk				( clk )
 		,.rst_n				( rst_n )
 

@@ -55,7 +55,7 @@ module bram_stream_s (
 		 .RMODE				 	( 2'b01 )
 		,.WMODE				 	( 2'b00 )
 	)
-	stream_interface_a (
+	stream_interface_s_a (
 		 .clk					( clk )
 		,.rst_n					( rst_n )
 
@@ -83,7 +83,7 @@ module bram_stream_s (
 	);
 
 
-	data_bram data_bram_low (
+	data_bram data_bram_s_low (
 		 .clka					( clk )
 		,.addra					( addra_l )
 		,.dina					( dina_l )
@@ -92,7 +92,7 @@ module bram_stream_s (
 	);
 
 
-	data_bram data_bram_high (
+	data_bram data_bram_s_high (
 		 .clka					( clk )
 		,.addra					( addra_h )
 		,.dina					( dina_h )
