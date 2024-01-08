@@ -5,8 +5,8 @@
 *
 * Create Date:    2023/06/05
 * Design Name:    poly_systolic_hw
-* Module Name:    interface
-* Project Name:   bram_stream
+* Module Name:    stream_interface_s
+* Project Name:   bram_stream_s
 * Target Devices: ZCU 102
 * Tool Versions:  Vivado 2021.2
 * Description:
@@ -22,7 +22,7 @@
 
 `include "define_bram_stream_s.vh"
 
-module stream_interface # (
+module stream_interface_s # (
 	parameter RMODE = 2'b01,
 	parameter WMODE = 2'b00
 )(

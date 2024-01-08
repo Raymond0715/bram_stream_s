@@ -5,8 +5,8 @@
 *
 * Create Date:    2023/08/23
 * Design Name:    poly_systolic_hw
-* Module Name:    stream_interface_wrap
-* Project Name:   bram_stream
+* Module Name:    stream_interface_s_wrap
+* Project Name:   bram_streams_
 * Target Devices: ZCU 102
 * Tool Versions:  Vivado 2021.2
 * Description:
@@ -19,7 +19,7 @@
 *******************************************************************************/
 
 
-module stream_interface_wrap # (
+module stream_interface_s_wrap # (
 	parameter RMODE = 2'b01,
 	parameter WMODE = 2'b00
 )(
@@ -130,7 +130,7 @@ module stream_interface_wrap # (
 	assign out_tready = (m_out_tready | ~m_out_tvalid) & rst_n;
 
 
-	stream_interface # (
+	stream_interface_s # (
 		 .RMODE				( RMODE )
 		,.WMODE				( WMODE )
 	)
